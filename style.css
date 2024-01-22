@@ -1,0 +1,291 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Alignment */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.app {
+  height: 80vh;
+  max-width: 65%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 70fr 30fr;
+  grid-template-rows: 2fr 4fr 4fr 4fr 1fr;
+  grid-template-areas:
+    "current-balance-box current-balance-box"
+    "movement-box transfer-box"
+    "movement-box request-box"
+    "movement-box delete-box"
+    "summary timer-box";
+  column-gap: 3.2rem;
+  row-gap: 1.6rem;
+  align-content: end;
+  transition: all 0.5;
+  /* opacity: 0; */
+}
+
+.current-balance-box {
+  grid-area: current-balance-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movement-box {
+  grid-area: movement-box;
+  background-color: #fff;
+  border-top-left-radius: 13px;
+  overflow-y: scroll;
+}
+.transfer-box {
+  grid-area: transfer-box;
+  background-image: linear-gradient(
+    to top left,
+    #ffb003,
+    #ffcb03
+  );
+}
+.request-box {
+  grid-area: request-box;
+  background-image: linear-gradient(
+    to top left,
+    #39b385,
+    #9be15d
+  );
+}
+.delete-box {
+  grid-area: delete-box;
+  background-image: linear-gradient(
+    to top left,
+    #e52a5a,
+    #ff585f
+  );
+}
+.summary {
+  grid-area: summary;
+}
+.timer-box {
+  grid-area: timer-box;
+  margin-left: auto;
+}
+/* General */
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 0.4rem 1.6rem;
+  background: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* Styles */
+
+/* Nav */
+.welcome-msg {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.logo {
+  width: 6rem;
+}
+
+.login-form {
+  display: flex;
+  gap: 1.6rem;
+}
+.userName,
+.pin {
+  border: none;
+  font-family: inherit;
+  outline: none;
+  text-align: center;
+
+  height: 4rem;
+  width: 15rem;
+  border-radius: 130px;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}
+.userName:focus,
+.pin:focus {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.login-btn {
+  font-size: 2.4rem;
+}
+
+/* balance */
+.current-balance-label {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.update-date {
+  font-size: 1.4rem;
+  color: #777;
+}
+
+.current-balance-value {
+  font-size: 4.4rem;
+}
+
+/* Movements */
+.movement-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 3.2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.movement-label {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 11px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.movement-label--withdrawl {
+  background-image: linear-gradient(
+    to top left,
+    #e52a5a,
+    #ff585f
+  );
+}
+.movement-label--deposit {
+  background-image: linear-gradient(
+    to top left,
+    #39b385,
+    #9be15d
+  );
+}
+
+.movement-date {
+  font-size: 1rem;
+}
+
+.movement-amount {
+  font-size: 1.6rem;
+}
+
+/* cards */
+.card {
+  border-radius: 11px;
+  padding: 1.6rem 3.2rem;
+}
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 1.6rem;
+}
+
+.card-form {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  position: relative;
+}
+
+.card-input > input {
+  font-family: inherit;
+  display: block;
+  padding: 0.4rem 0.8rem;
+  width: 12rem;
+  border-radius: 9px;
+  border: none;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card-input > input:focus {
+  background-color: rgba(255, 255, 255, 0.8);
+  outline: none;
+}
+.card-input > label {
+  font-size: 1.2rem;
+  display: block;
+  position: absolute;
+  top: 110%;
+}
+.card-btn {
+  background-color: #fff;
+  font-size: 1.8rem;
+}
+
+/* summary */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.summary-value {
+  font-size: 2.4rem;
+  margin-left: 0.8rem;
+}
+
+.summary-value--positive {
+  color: #66c873;
+}
+
+.summary-value--negative {
+  color: #f5465d;
+}
+
+.timer-label {
+  font-size: 1.2rem;
+}
+.timer-value {
+  font-weight: 600;
+}
