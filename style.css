@@ -56,8 +56,8 @@ body {
   column-gap: 3.2rem;
   row-gap: 1.6rem;
   align-content: end;
-  transition: all 0.5;
-  /* opacity: 0; */
+  opacity: 0;
+  transition: all 1s;
 }
 
 .current-balance-box {
@@ -75,27 +75,15 @@ body {
 }
 .transfer-box {
   grid-area: transfer-box;
-  background-image: linear-gradient(
-    to top left,
-    #ffb003,
-    #ffcb03
-  );
+  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
 }
 .request-box {
   grid-area: request-box;
-  background-image: linear-gradient(
-    to top left,
-    #39b385,
-    #9be15d
-  );
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
 }
 .delete-box {
   grid-area: delete-box;
-  background-image: linear-gradient(
-    to top left,
-    #e52a5a,
-    #ff585f
-  );
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
 }
 .summary {
   grid-area: summary;
@@ -192,18 +180,10 @@ body {
 }
 
 .movement-label--withdrawl {
-  background-image: linear-gradient(
-    to top left,
-    #e52a5a,
-    #ff585f
-  );
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
 }
 .movement-label--deposit {
-  background-image: linear-gradient(
-    to top left,
-    #39b385,
-    #9be15d
-  );
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
 }
 
 .movement-date {
