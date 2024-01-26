@@ -1,158 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    >
-    <link
-      rel="shortcut icon"
-      href="./icon.png"
-      type="image/png"
-    >
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="./style.css"
-    >
-    <title>Bankist app</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./icon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css">
+  <title>Bankist app</title>
+</head>
 
-  <body>
-    <nav class="main-nav">
-      <p class="welcome-msg">Log in to get started</p>
-      <img
-        src="./logo.png"
-        alt="Bankist logo image"
-        class="logo"
-      >
-      <form
-        action=""
-        class="login-form"
-      >
-        <input
-          type="text"
-          class="userName"
-          placeholder="user"
-        >
-        <input
-          type="number"
-          class="pin"
-          placeholder="PIN"
-        >
-        <button class="btn login-btn">&rarr;</button>
+<body>
+  <nav class="main-nav">
+    <p class="welcome-msg">Log in to get started</p>
+    <img src="./logo.png" alt="Bankist logo image" class="logo">
+    <form action="" class="login-form">
+      <input type="text" class="userName" placeholder="user">
+      <input type="text" class="pin" placeholder="PIN" maxlength="4">
+      <button class="btn login-btn">&rarr;</button>
+    </form>
+  </nav>
+  <main class="app">
+    <div class="current-balance-box">
+      <div class="current-balance">
+        <p class="current-balance-label">current balance</p>
+        <p class="update-date">As of <span>05/03/2037</span></p>
+      </div>
+      <p class="current-balance-value">0000€</p>
+    </div>
+    <div class="movement-box">
+      <div class="movement-row">
+        <div class="movement-label movement-label--deposit"><span class="num">2</span>
+          <p class="movement-type">deposit</p>
+        </div>
+        <p class="movement-date">12/03/2020</p>
+        <p class="movement-amount">4 000€</p>
+
+      </div>
+      <div class="movement-row ">
+        <div class="movement-label movement-label--withdrawl">
+          <span class="num">1</span>
+          <p class="movement-type">withdrawal</p>
+        </div>
+        <p class="movement-date">12/03/2020</p>
+        <p class="movement-amount">-378€</p>
+
+      </div>
+    </div>
+    <div class="card transfer-box">
+      <p class="card-title">Transfer money</p>
+      <form action="" class="card-form">
+        <div class="card-input">
+          <input type="text" id="transfer-to">
+          <label for="transfer-to">Transfer to</label>
+        </div>
+        <div class="card-input">
+          <input type="number" id="transfer-amount">
+          <label for="transfer-to">Transfer amount</label>
+        </div>
+        <button class="btn card-btn btn--transfer">&rarr;</button>
       </form>
-    </nav>
-    <main class="app">
-      <div class="current-balance-box">
-        <div class="current-balance">
-          <p class="current-balance-label">current balance</p>
-          <p class="update-date">As of 05/03/2037</p>
+    </div>
+    <div class="card request-box">
+      <p class="card-title">Request loan</p>
+      <form action="" class="card-form">
+        <div class="card-input">
+          <input type="text" id="loan-amount">
+          <label for="loan-amount">Amount</label>
         </div>
-        <p class="current-balance-value">0000€</p>
-      </div>
-      <div class="movement-box">
-        <div class="movement-row">
-          <div class="movement-label movement-label--deposit"><span class="num">2</span>
-            <p class="movement-type">deposit</p>
-          </div>
-          <p class="movement-date">12/03/2020</p>
-          <p class="movement-amount">4 000€</p>
 
+        <button class="btn card-btn btn--loan">&rarr;</button>
+      </form>
+    </div>
+    <div class="card delete-box">
+      <p class="card-title">Close account</p>
+      <form action="" class="card-form">
+        <div class="card-input">
+          <input type="text" id="confirm-user">
+          <label for="confirm-user">Confirm user</label>
         </div>
-        <div class="movement-row ">
-          <div class="movement-label movement-label--withdrawl">
-            <span class="num">1</span>
-            <p class="movement-type">withdrawal</p>
-          </div>
-          <p class="movement-date">12/03/2020</p>
-          <p class="movement-amount">-378€</p>
-
+        <div class="card-input">
+          <input type="number" id="confirm-pin">
+          <label for="confirm-pin">Confirm BIN</label>
         </div>
-      </div>
-      <div class="card transfer-box">
-        <p class="card-title">Transfer money</p>
-        <form
-          action=""
-          class="card-form"
-        >
-          <div class="card-input">
-            <input
-              type="text"
-              id="transfer-to"
-            >
-            <label for="transfer-to">Transfer to</label>
-          </div>
-          <div class="card-input">
-            <input
-              type="number"
-              id="transfer-amount"
-            >
-            <label for="transfer-to">Transfer amount</label>
-          </div>
-          <button class="btn card-btn">&rarr;</button>
-        </form>
-      </div>
-      <div class="card request-box">
-        <p class="card-title">Request loan</p>
-        <form
-          action=""
-          class="card-form"
-        >
-          <div class="card-input">
-            <input
-              type="text"
-              id="load-amount"
-            >
-            <label for="load-amount">Amount</label>
-          </div>
-
-          <button class="btn card-btn">&rarr;</button>
-        </form>
-      </div>
-      <div class="card delete-box">
-        <p class="card-title">Close account</p>
-        <form
-          action=""
-          class="card-form"
-        >
-          <div class="card-input">
-            <input
-              type="text"
-              id="confirm-user"
-            >
-            <label for="confirm-user">Confirm user</label>
-          </div>
-          <div class="card-input">
-            <input
-              type="number"
-              id="confirm-bin"
-            >
-            <label for="confirm-bin">Confirm BIN</label>
-          </div>
-          <button class="btn card-btn">&rarr;</button>
-        </form>
-      </div>
-      <div class="summary">
-        <p class="summary-label">IN <span class="summary-value summary-value--positive">0000€</span></p>
-        <p class="summary-label">OUT <span class="summary-value summary-value--negative">0000€</span></p>
-        <p class="summary-label">Interest <span class="summary-value summary-value--positive">0000€</span></p>
-        <button class="btn">&darr; Sort</button>
-      </div>
-      <div class="timer-box">
-        <p class="timer-label">You will be logged out in <span class="timer-value">05:00</span></p>
-      </div>
+        <button class="btn card-btn btn--delete">&rarr;</button>
+      </form>
+    </div>
+    <div class="summary">
+      <p class="summary-label">IN <span class="summary-value summary-value--positive summary--in">0000€</span></p>
+      <p class="summary-label">OUT <span class="summary-value summary-value--negative summary--out">0000€</span></p>
+      <p class="summary-label">Interest <span
+          class="summary-value summary-value--positive summary--interest">0000€</span></p>
+      <button class="btn btn--sort">&darr; Sort</button>
+    </div>
+    <div class="timer-box">
+      <p class="timer-label">You will be logged out in <span class="timer-value">05:00</span></p>
+    </div>
 
 
-    </main>
+  </main>
 
 
-    <script src="./script.js"></script>
-  </body>
+  <script src="./script.js"></script>
+</body>
 
 </html>
